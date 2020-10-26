@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/api/policies', policyRouter);
+app.use('/api/claims', claimsRouter);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () =>{
