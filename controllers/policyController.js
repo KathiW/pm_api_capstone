@@ -1,17 +1,14 @@
 var Policy = require('../models/policy');
 
-const anActualPolicy = new Policy({
-    name: "Kathi Ward",
-    type: "Property",
-    holder_first_name: "Kathi",
-    holder_last_name: "Ward",
-    holder_account_id: "KW122345",
-    is_active: true,
-    has_active_claim: true,
-    effective_date: "2020-01-01",
-    termination_date: null
-});
-
 exports.policy_create_post = function(req,res) {
-    res.json(anActualPolicy);
-};
+    const policy = new Policy(req.body);
+
+    policy.save()
+    .then(data => {
+        res.status(200).json(data);
+    })
+    .catch(err => {
+        res.status(400).send('There was an issue while trying to save the Policy');
+    });
+
+    };
