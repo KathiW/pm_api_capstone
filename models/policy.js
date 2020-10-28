@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Policy = new Schema({
-    name: String,
+    name: String, 
     type: String,
     holder_first_name: String,
     holder_last_name: String,

@@ -12,13 +12,13 @@ Content-Type: application/json
 
 
 {
-    "name": "Kathi Tripathi",
+    "name": "Kathi Ward",
     "type": "Property",
-    "holder_first_name": "Shanvi",
-    "holder_last_name": "Tripathi",
-    "holder_account_id": "H31234SW543",
+    "holder_first_name": "Kathi",
+    "holder_last_name": "Ward",
+    "holder_account_id": "H77774SW543",
     "is_active": true,
-    "has_active_claim": true,
+    "has_active_claim": false,
     "effective_date": "2020-01-01",
-    "termination_date": "2020-12-31"
+    "termination_date": "2021-12-31"
 }
