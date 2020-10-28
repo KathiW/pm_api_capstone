@@ -12,7 +12,7 @@ Content-Type: application/json
 
 
 {
-    "name": "Kathi Ward",
+    "name": "Kathi W Ward",
     "type": "Property",
     "holder_first_name": "Kathi",
     "holder_last_name": "Ward",
@@ -40,4 +40,9 @@ Content-Type: application/json
 ###
 //delete byID
 DELETE  http://localhost:8080/api/policies/5f98804a57d23a4a189a03f9 HTTP/1.1
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/api/policies HTTP/1.1
 Content-Type: application/json

@@ -21,4 +21,8 @@ router.put("/:id", policy_controller.updateById);
 //delete a policy
 router.delete("/:id", policy_controller.deleteById);
 
+//delete all policies
+router.delete("/", policy_controller.deleteAll);
+
+
 module.exports = router;

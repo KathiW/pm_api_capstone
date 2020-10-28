@@ -81,3 +81,16 @@ exports.policy_create_post = function(req,res) {
         .catch(error => {res.status(400).send({ErrorMessage: error.message});
         });
     };
+
+    exports.deleteAll = (req,res) => {
+        //const id = req.params.id;
+       // console.log(`>>>GET the policy information for ${id}...`);
+      // if (id != null && id != ''){
+            Policy.deleteMany()
+            .then(data => {
+                res.status(200).json(data);
+                })
+            .catch(error => {
+                res.status(400).send({ErrorMessage: error.message});
+        });
+    };
