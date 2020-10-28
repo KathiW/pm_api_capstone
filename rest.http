@@ -36,3 +36,8 @@ Content-Type: application/json
 {
     "name": "Sunny Regan"
 }
+
+###
+//delete byID
+DELETE  http://localhost:8080/api/policies/5f98804a57d23a4a189a03f9 HTTP/1.1
+Content-Type: application/json

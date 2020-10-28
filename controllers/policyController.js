@@ -64,3 +64,20 @@ exports.policy_create_post = function(req,res) {
         });
     }
     };
+
+    exports.deleteById = (req,res) => {
+        const id = req.params.id;
+       // console.log(`>>>GET the policy information for ${id}...`);
+      // if (id != null && id != ''){
+            Policy.findByIdAndDelete(id)
+            .then(data => {
+                if(!data){
+                    res.status(404).send({Message: `No Policy Data found with ID: ${id}.`});
+                }
+                else {
+                    res.status(200).send(`${id} Policy deleted`);
+                                }            
+        })
+        .catch(error => {res.status(400).send({ErrorMessage: error.message});
+        });
+    };

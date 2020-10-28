@@ -15,6 +15,10 @@ router.post('/', policy_controller.policy_create_post);
 //Get policy by ID
 router.get("/:id", policy_controller.getById);
 
+//update something by ID
 router.put("/:id", policy_controller.updateById);
+
+//delete a policy
+router.delete("/:id", policy_controller.deleteById);
 
 module.exports = router;
